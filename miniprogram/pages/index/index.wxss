@@ -11,5 +11,5 @@
     z-index: -1;
   }
   .button1{
-      
+      width: 100 rpx;
   }
