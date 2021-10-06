@@ -1,0 +1,4 @@
+<!--pages/rank/rank.wxml-->
+<view class="title" >
+<image src="../../images/rank.png" mode="widthFix"></image>
+</view>
