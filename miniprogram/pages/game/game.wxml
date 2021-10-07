@@ -1,0 +1,19 @@
+<!--pages/game/game.wxml-->
+<!--pages/game/game.wxml--> 
+<view class="container"> 
+    <view class="main"> 
+        <view class="bowl" id="dicebox"> 
+            <image class="bg_img" src="../../images/port.jpg" /> 
+        </view> 
+    </view> 
+    <text>剩余博饼次数:{{count}}</text> 
+    <view class="btn-box"> 
+        <button class="btn" bindtap="begin" type="default">开始博饼</button> 
+    </view> 
+    <image id="redpacket0" src="{{dicepath1}}" mode="aspectFit" hidden="{{tap}}"></image> 
+    <image id="redpacket1" src="{{dicepath2}}" mode="aspectFit" hidden="{{tap}}"></image> 
+    <image id="redpacket2" src="{{dicepath3}}" mode="aspectFit" hidden="{{tap}}"></image> 
+    <image id="redpacket3" src="{{dicepath4}}" mode="aspectFit" hidden="{{tap}}"></image> 
+    <image id="redpacket4" src="{{dicepath5}}" mode="aspectFit" hidden="{{tap}}"></image> 
+    <image id="redpacket5" src="{{dicepath6}}" mode="aspectFit" hidden="{{tap}}"></image> 
+</view>
