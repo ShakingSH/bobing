@@ -1,11 +1,10 @@
 // pages/room/room.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    
+    rule_show:false
   },
 
   /**
@@ -62,5 +61,12 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  // 规则弹窗
+  handlerule(){
+    console.log("begin"),
+    this.setData({
+        rule_show:true
+    })
+}
 })

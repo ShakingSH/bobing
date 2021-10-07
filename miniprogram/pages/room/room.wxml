@@ -1,19 +1,26 @@
 <!--pages/room/room.wxml-->
 <!-- 背景图片 -->
 <image class="background" src="../../images/background.png"></image>
+<!-- 规则弹窗 -->
+<page-container class="tanchuang" show="{{rule_show}}" overlay-style="z-index:99" custom-style="z-index:999">
+    <image src="../../images/rulers.jpg"></image>
+</page-container>
 <!-- 顶部图标 -->
 <view class="flex-wrp" style="flex-direction:row" >
     <button class="b">
-      <image class="top" src="../../images/order.png"></image>获奖名单
+      <image class="top" src="../../images/颁奖.png"></image>结果
     </button>
-    <button class="b">           
-      <image class="top" src="../../images/personal.png"></image>成员
+    <!-- <button class="b">           
+      <image class="top" src="../../images/团队.png"></image>成员
+    </button> -->
+    <button class="b">
+      <image class="top" src="../../images/管理设置.png"></image>设置
     </button>
     <button class="b">
-      <image class="top" src="../../images/setting.png"></image>房间设置
+      <image class="top" src="../../images/推荐有奖.png"></image>奖品
     </button>
     <button class="b">
-      <image class="top" src="../../images/gift.png"></image>奖品列表
+      <image class="top" src="../../images/测评.png" bindtap="handlerule"></image>规则
     </button>
 </view>
 <!-- 轮播图 -->
@@ -29,8 +36,10 @@
   </swiper-item>
 </swiper>
 <!-- 文字标签 -->
-<text class="textstyle1">房间号：</text>
-<text class="textstyle2">房间名：</text>
+<!-- <text class="textstyle1">房间号：</text>
+<text class="textstyle2">房间名：</text> -->
+<text selectable decode class="textstyle1">&nbsp;</text>
+<text selectable decode class="textstyle2">&nbsp;</text>
 <text class="textstyle2">房间人数：</text>
 <!-- 开始按钮 -->
 <navigator url="../game/game">
