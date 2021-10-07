@@ -11,8 +11,12 @@ Page({
         dicepath4:"../../images/1.jpg", 
         dicepath5:"../../images/1.jpg", 
         dicepath6:"../../images/1.jpg", 
-        count:10, 
-        tap:true 
+        count:1, 
+        tap:true, 
+        buttype:false,
+        tip1:"恭喜你！",
+        tip2:"状元插金花",
+        retshow:false
     }, 
  
     /** 
@@ -139,7 +143,7 @@ Page({
     {top: "100px",left: "130px",rotate:(1080),},     
     {top: "130px",left: "140px",rotate:(1440),}, 
     {top: "150px",left: "150px",rotate:(3600),}, 
-    {top: "140px",left: "1600px",rotate:(2160),}, 
+    {top: "140px",left: "160px",rotate:(2160),}, 
     {top: "190px",left: "150px",rotate:(2520),}, 
     {top: "171px",left: "174px",rotate:(3240),}, 
     {top: "133px",left: "167px"}, 
@@ -168,7 +172,11 @@ this.animate('#redpacket5',[
     {top: "135px",left: "80px",rotate:(3240),}, 
     {top: "141px",left: "99px"}, 
 ],1500,function () {}.bind(this)); 
-    }, 
+
+setTimeout(function () {
+    this.judge(arr);
+  }.bind(this), 2000)
+ }, 
     randomFun: function () { 
         var arr = []; 
         for (var i = 0; i < 6; i++) { 
@@ -178,12 +186,124 @@ this.animate('#redpacket5',[
     }, 
     begin: function () { 
         console.log("begin"); 
-        var num=this.data.count; 
+        if(this.data.count===0){
+            wx.showModal({
+              title:"次数耗尽",
+              content:"请点击确认返回",
+              showCancel:false,
+              success(res){
+                if(res.confirm){
+                wx.navigateTo({
+                url: '../room/room',
+              })  
+              }    
+            }
+            })
+        }
+        else{
+          var num=this.data.count; 
         num--; 
         this.setData({ 
+            buttype:true,
             tap:false, 
-           count:num 
+            count:num 
         }) 
-        this.init(); 
+        this.init();   
+        }    
     }, 
+    judge:function(arr){
+        var jdarr=new Array(6);
+        var ret=new Array(12);
+        for(var index = 0;index < jdarr.length;index++){
+            jdarr[index] = 0;
+        }
+        for(var index = 0;index < ret.length;index++){
+            ret[index] = 0;
+        }
+        for(var index = 0;index < jdarr.length;index++){
+            jdarr[arr[index]]++;
+        }
+        if(jdarr[3]===4&&jdarr[0]==2) {
+            this.setData({
+                tip1:"恭喜你",
+                tip2:"状元插金花"
+            })
+        }
+        else if(jdarr[3]===6) {
+            this.setData({
+                tip1:"恭喜你",
+                tip2:"状元红六勃"
+            })
+        }
+        else if(jdarr[0]===6) {
+            this.setData({
+                tip1:"恭喜你",
+                tip2:"状元遍地锦"
+            })
+        }
+        else if(jdarr[2]===6) {
+            this.setData({
+                tip1:"恭喜你",
+                tip2:"状元黑六勃"
+            })
+        }
+        else if(jdarr[3]===5) {
+            this.setData({
+                tip1:"恭喜你",
+                tip2:"状元五红"
+            })
+        }
+        else if(jdarr[1]===5) {
+            this.setData({
+                tip1:"恭喜你",
+                tip2:"状元五子登科"
+            })
+        }
+        else if(jdarr[3]===4) {
+            this.setData({
+                tip1:"恭喜你",
+                tip2:"状元四红"
+            })
+        }
+        else if(jdarr[0]===1&&jdarr[1]===1&&jdarr[2]===1&&jdarr[3]===1&&jdarr[4]===1&&jdarr[5]===1) {
+            this.setData({
+                tip1:"恭喜你",
+                tip2:"榜眼对堂"
+            })
+        }
+        else if(jdarr[3]===3) {
+            this.setData({
+                tip1:"恭喜你",
+                tip2:"探花三红"
+            })
+        }
+        else if(jdarr[1]===3) {
+            this.setData({
+                tip1:"恭喜你",
+                tip2:"进士四进"
+            })
+        }
+        else if(jdarr[3]===2) {
+            this.setData({
+                tip1:"恭喜你",
+                tip2:"举人二举"
+            })
+        }
+        else if(jdarr[3]===1) {
+            this.setData({
+                tip1:"恭喜你",
+                tip2:"秀才一秀"
+            })
+        }
+        else{
+            this.setData({
+                tip1:"很遗憾",
+                tip2:"下次一定"
+            })
+        }
+        this.setData({
+            retshow:true,
+            buttype:false
+        })
+    }
 })

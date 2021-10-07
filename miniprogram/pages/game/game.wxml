@@ -1,5 +1,11 @@
 <!--pages/game/game.wxml-->
 <!--pages/game/game.wxml--> 
+<page-container class="tanchuang" show="{{retshow}}" overlay-style="z-index:99" custom-style="z-index:999">
+        <image id="ret" src="../../images/result.png">
+        <text id="t1" >{{tip1}}</text>
+        <text id="t2" >{{tip2}}</text>
+        </image>
+</page-container>
 <view class="container"> 
     <view class="main"> 
         <view class="bowl" id="dicebox"> 
@@ -8,7 +14,7 @@
     </view> 
     <text>剩余博饼次数:{{count}}</text> 
     <view class="btn-box"> 
-        <button class="btn" bindtap="begin" type="default">开始博饼</button> 
+        <button class="btn" bindtap="begin" disabled="{{buttype}}" type="default">开始博饼</button> 
     </view> 
     <image id="redpacket0" src="{{dicepath1}}" mode="aspectFit" hidden="{{tap}}"></image> 
     <image id="redpacket1" src="{{dicepath2}}" mode="aspectFit" hidden="{{tap}}"></image> 
