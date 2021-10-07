@@ -1,0 +1,44 @@
+/* pages/room/room.wxss */
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  z-index: -1;
+}
+.flex-wrp{
+  margin-top: 20rpx;
+  display:flex;
+}
+.top{
+  background-color: azure;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+.b{
+  font-size: 10%;
+  flex: inherit;
+  color:ivory;
+}
+swiper
+{
+  width:100%;
+  height:calc(100vw * 110 / 640); /* 640 110 分别是图片长和高的像素 */
+}
+image
+{
+  width:100%;
+}
+.begin {
+  margin-top: 20% ;
+  width: auto;
+  height: 40px;
+  background-color: rgb(108, 209, 150);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  z-index: 0;
+  border-radius: 50px;
+  padding-left: 0%;
+  padding-right: 0%
+}

@@ -1,0 +1,38 @@
+<!--pages/room/room.wxml-->
+<!-- 背景图片 -->
+<image class="background" src="../../images/background.png"></image>
+<!-- 顶部图标 -->
+<view class="flex-wrp" style="flex-direction:row" >
+    <button class="b">
+      <image class="top" src="../../images/order.png"></image>获奖名单
+    </button>
+    <button class="b">           
+      <image class="top" src="../../images/personal.png"></image>成员
+    </button>
+    <button class="b">
+      <image class="top" src="../../images/setting.png"></image>房间设置
+    </button>
+    <button class="b">
+      <image class="top" src="../../images/gift.png"></image>奖品列表
+    </button>
+</view>
+<!-- 轮播图 -->
+<swiper indicator-dots="true" autoplay="true" interval="2000" circular="true">
+  <swiper-item>
+    <image mode="widthFix" src="../../images/rank.png"></image>
+  </swiper-item>
+  <swiper-item>
+    <image mode="widthFix" src="../../images/rank.png"></image>
+  </swiper-item>
+  <swiper-item>
+    <image mode="widthFix" src="../../images/rank.png"></image>
+  </swiper-item>
+</swiper>
+<!-- 文字标签 -->
+<view class="flex-wrp" style="flex-direction:row" >
+  <text class="b">房间号：</text>
+  <text class="b">房间名：</text>
+  <text class="b">房间人数：</text>
+</view>
+<!-- 开始按钮 -->
+<button class="begin">开始博饼</button>

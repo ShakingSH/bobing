@@ -1,5 +1,5 @@
 <!--pages/index/index.wxml-->
-<view class="box">
+<view  class="box">
     <!-- 规则弹窗 -->
     <page-container class="tanchuang" show="{{rule_show}}" overlay-style="z-index:99" custom-style="z-index:999">
         <image src="../../images/rulers.jpg"></image>
