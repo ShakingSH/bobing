@@ -29,10 +29,10 @@
   </swiper-item>
 </swiper>
 <!-- 文字标签 -->
-<view class="flex-wrp" style="flex-direction:row" >
-  <text class="b">房间号：</text>
-  <text class="b">房间名：</text>
-  <text class="b">房间人数：</text>
-</view>
+<text class="textstyle1">房间号：</text>
+<text class="textstyle2">房间名：</text>
+<text class="textstyle2">房间人数：</text>
 <!-- 开始按钮 -->
-<button class="begin">开始博饼</button>
+<navigator url="../game/game">
+  <button class="begin">开始博饼</button>
+</navigator>
