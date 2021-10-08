@@ -16,43 +16,62 @@ Page({
         buttype:false,
         tip1:"恭喜你！",
         tip2:"状元插金花",
-        retshow:false
+        retshow:false,
+        playerlist:[],
+        pnum:8,
+        pcnt:5,
+        str1:""
     }, 
  
     /** 
      * 生命周期函数--监听页面加载 
      */ 
     onLoad: function (options) { 
- 
+
     }, 
  
     /** 
      * 生命周期函数--监听页面初次渲染完成 
      */ 
     onReady: function () { 
- 
+
     }, 
  
     /** 
      * 生命周期函数--监听页面显示 
      */ 
     onShow: function () { 
- 
+        var v1=wx.getStorageSync("knum")
+        var v2=wx.getStorageSync("kcnt")
+        var v3=wx.getStorageSync("count")
+        this.setData({
+            pnum:v1,
+            pcnt:v2,
+            count:v3
+        })
+        var arr=wx.getStorageSync("list")
+        var str="当前轮到 玩家"+((this.data.pnum*this.data.pcnt-this.data.count)%this.data.pnum+1)+" 投TA的第"+parseInt(((this.data.pnum*this.data.pcnt-this.data.count)/this.data.pnum+1))+"次骰子"
+        this.setData({
+            str1:str,
+            playerlist:arr
+        })
     }, 
  
     /** 
      * 生命周期函数--监听页面隐藏 
      */ 
     onHide: function () { 
- 
+        wx.setStorageSync("count",this.data.count)
+        wx.setStorageSync("list",this.data.playerlist)
     }, 
  
     /** 
      * 生命周期函数--监听页面卸载 
      */ 
     onUnload: function () { 
- 
-    }, 
+        wx.setStorageSync("count",this.data.count)
+        wx.setStorageSync("list",this.data.playerlist)
+    },
  
     /** 
      * 页面相关事件处理函数--监听用户下拉动作 
@@ -172,10 +191,14 @@ this.animate('#redpacket5',[
     {top: "135px",left: "80px",rotate:(3240),}, 
     {top: "141px",left: "99px"}, 
 ],1500,function () {}.bind(this)); 
-
+var str="当前轮到 玩家"+((this.data.pnum*this.data.pcnt-this.data.count)%this.data.pnum+1)+" 投TA的第"+(parseInt((this.data.pnum*this.data.pcnt-this.data.count)/this.data.pnum+1))+"次骰子";
 setTimeout(function () {
-    this.judge(arr);
-  }.bind(this), 2000)
+    this.judge(arr,(this.data.pnum*this.data.pcnt-this.data.count-1)%this.data.pnum);
+    var that=this;
+    this.setData({
+        str1:str
+    })
+  }.bind(this), 2500)
  }, 
     randomFun: function () { 
         var arr = []; 
@@ -193,15 +216,16 @@ setTimeout(function () {
               showCancel:false,
               success(res){
                 if(res.confirm){
-                wx.navigateTo({
-                url: '../room/room',
-              })  
-              }    
+                wx.navigateBack({
+                  delta: 1,
+                })
             }
+        }
             })
         }
+        
         else{
-          var num=this.data.count; 
+        var num=this.data.count; 
         num--; 
         this.setData({ 
             buttype:true,
@@ -209,9 +233,9 @@ setTimeout(function () {
             count:num 
         }) 
         this.init();   
-        }    
+        } 
     }, 
-    judge:function(arr){
+    judge:function(arr,i){
         var jdarr=new Array(6);
         var ret=new Array(12);
         for(var index = 0;index < jdarr.length;index++){
@@ -228,72 +252,84 @@ setTimeout(function () {
                 tip1:"恭喜你",
                 tip2:"状元插金花"
             })
+            this.data.playerlist.push("玩家"+(i+1)+"获得了状元插金花");
         }
         else if(jdarr[3]===6) {
             this.setData({
                 tip1:"恭喜你",
                 tip2:"状元红六勃"
             })
+            this.data.playerlist.push("玩家"+(i+1)+"获得了状元红六勃");
         }
         else if(jdarr[0]===6) {
             this.setData({
                 tip1:"恭喜你",
                 tip2:"状元遍地锦"
             })
+            this.data.playerlist.push("玩家"+(i+1)+"获得了状元遍地锦");
         }
         else if(jdarr[2]===6) {
             this.setData({
                 tip1:"恭喜你",
                 tip2:"状元黑六勃"
             })
+            this.data.playerlist.push("玩家"+(i+1)+"获得了状元黑六勃");
         }
         else if(jdarr[3]===5) {
             this.setData({
                 tip1:"恭喜你",
                 tip2:"状元五红"
             })
+            this.data.playerlist.push("玩家"+(i+1)+"获得了状元五红");
         }
         else if(jdarr[1]===5) {
             this.setData({
                 tip1:"恭喜你",
                 tip2:"状元五子登科"
             })
+            this.data.playerlist.push("玩家"+(i+1)+"获得了状元五子登科");
         }
         else if(jdarr[3]===4) {
             this.setData({
                 tip1:"恭喜你",
                 tip2:"状元四红"
             })
+            this.data.playerlist.push("玩家"+(i+1)+"获得了状元四红");
         }
         else if(jdarr[0]===1&&jdarr[1]===1&&jdarr[2]===1&&jdarr[3]===1&&jdarr[4]===1&&jdarr[5]===1) {
             this.setData({
                 tip1:"恭喜你",
                 tip2:"榜眼对堂"
             })
+            this.data.playerlist.push("玩家"+(i+1)+"获得了榜眼对堂");
         }
         else if(jdarr[3]===3) {
             this.setData({
                 tip1:"恭喜你",
                 tip2:"探花三红"
             })
+            this.data.playerlist.push("玩家"+(i+1)+"获得了探花三红");
         }
         else if(jdarr[1]===3) {
             this.setData({
                 tip1:"恭喜你",
                 tip2:"进士四进"
             })
+            this.data.playerlist.push("玩家"+(i+1)+"获得了进士四进");
         }
         else if(jdarr[3]===2) {
             this.setData({
                 tip1:"恭喜你",
                 tip2:"举人二举"
             })
+            this.data.playerlist.push("玩家"+(i+1)+"获得了举人二举");
         }
         else if(jdarr[3]===1) {
             this.setData({
                 tip1:"恭喜你",
                 tip2:"秀才一秀"
             })
+            this.data.playerlist.push("玩家"+(i+1)+"获得了秀才一秀");
         }
         else{
             this.setData({

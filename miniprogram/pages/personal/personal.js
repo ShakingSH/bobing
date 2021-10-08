@@ -5,14 +5,28 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        nickname:"点击登录",
+        avatarurl:"../../images/头像.png"
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        // wx.getSetting({
+        //     success:res=>{
+        //         if(res.authSetting['scope.userInfo']){
+        //             wx.getUserInfo({
+        //               success:res=>{
+        //                   this.setData({
+        //                     avatarurl:res.userInfo.avatarUrl,
+        //                     nickname:res.userInfo.nickName
+        //                   })
+        //               }
+        //             })
+        //         }
+        //     }
+        // })
     },
 
     /**
@@ -62,5 +76,22 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+    // 获取用户信息
+    getuserinfo:function(e)
+    {
+        // console.log(e.detail.userInfo)
+        this.setData({
+            nickname:e.detail.userInfo.nickName,
+            avatarurl:e.detail.userInfo.avatarUrl
+        })
+    },
+    // 退出登录
+    logout:function()
+    {
+        wx.clearStorage({})
+        wx.reLaunch({
+          url: '../personal/personal',
+        })
     }
 })

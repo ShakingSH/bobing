@@ -7,24 +7,7 @@
   margin-top: 10rpx;
   display:flex;
 }
-.b1{
-  margin:9px;
-  margin-left: 10%;
-  font-size: 10%;
-  flex: inherit;
-  color:ivory;
-}
-.icon{
-  background-color: azure;
-  z-index: 1;
-  width: 30px;
-  height: 30px;
-}
-.b{
-  font-size: 10%;
-  flex: inherit;
-  color:ivory;
-}
+/* 背景图片 */
 .background {
   position: fixed;
   width: 100%;
@@ -32,8 +15,9 @@
   background-size: 100%;
   z-index: -1;
 }
+/* 创建房间按钮设置 */
 .button1 {
-  margin-top: 42% ;
+  margin-top: 35% ;
   width: auto;
   height: 40px;
   background-color: rgba(255, 255, 255);
@@ -41,46 +25,48 @@
   text-align: center;
   z-index: 0;
   border-radius: 50px;
-  padding-left: 0%;
+  padding-left: 9%;
   padding-right: 0%
 }
+/* 加入房间/快速入桌 按钮设置 */
+.button2 {
+  margin-top: 15% ;
+  width: auto;
+  height: 40px;
+  background-color: rgba(255, 255, 255);
+  color: rgb(74, 80, 158);
+  text-align: center;
+  z-index: 0;
+  border-radius: 50px;
+  padding-left: 9%;
+  padding-right: 0%
+}
+/* cakex 图标设置 */
 .cake1 {
   position: fixed;
   z-index: 0;
-  right: 62%;
-  bottom: 61%;
-  width: 11%;
-  height: 11%;
-}
-.button2 {
-  margin-top: 10% ;
-  width: auto;
-  height: 40px;
-  background-color: rgba(255, 255, 255);
-  color: rgb(74, 80, 158);
-  text-align: center;
-  z-index: 0;
-  border-radius: 50px;
-  padding-left: 0%;
-  padding-right: 0%
+  right: 57.5%;
+  bottom: 66.5%;
+  width: 10%;
+  height: 10%;
 }
 .cake2 {
   position: fixed;
   z-index: 0;
-  right: 62%;
-  bottom: 45%;
-  width: 11%;
-  height: 11%;
+  right: 57.5%;
+  bottom: 47.1%;
+  width: 10%;
+  height: 10%;
 }
 .cake3 {
   position: fixed;
   z-index: 0;
-  right: 62%;
-  bottom: 29%;
-  width: 11%;
-  height: 11%;
+  right: 57.5%;
+  bottom: 27.6%;
+  width: 10%;
+  height: 10%;
 }
-/* 透明度 */
+/* 按钮透明度 */
 #img{
   opacity: 70%;
 }

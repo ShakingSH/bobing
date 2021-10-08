@@ -12,9 +12,9 @@
             <image class="bg_img" src="../../images/port.jpg" /> 
         </view> 
     </view> 
-    <text>剩余博饼次数:{{count}}</text> 
+    <text>{{str1}}</text> 
     <view class="btn-box"> 
-        <button class="btn" bindtap="begin" disabled="{{buttype}}" type="default">开始博饼</button> 
+        <button style="width:250rpx" class="btn" bindtap="begin" disabled="{{buttype}}" type="default">投骰子</button> 
     </view> 
     <image id="redpacket0" src="{{dicepath1}}" mode="aspectFit" hidden="{{tap}}"></image> 
     <image id="redpacket1" src="{{dicepath2}}" mode="aspectFit" hidden="{{tap}}"></image> 

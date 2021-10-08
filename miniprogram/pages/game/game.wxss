@@ -2,7 +2,11 @@
 /* pages/game/game.wxss */  
  
 /* wxml初始化布局 */  
+.tanchuang{
+    width: 100%;
+}
 #ret{
+    width: 100%;
     position:fixed;
     top:20%;
     opacity:60%
@@ -31,21 +35,23 @@
  
 .main {  
     width: 100%;  
-    margin: 0 auto;  
 }  
  
 .bowl {  
-    text-align: center;  
-    width: 78%;  
+    height: 800rpx;
+    width: 100%;  
 }  
  
 .bg_img {  
-    margin: 20%;  
-    margin-left: 0%;  
+    width: 100%;
+    position: absolute;
+    left: 1rpx;
+    top: 130rpx;
 }  
  
 .btn-box {  
-    text-align: center;  
+    text-align: center; 
+    margin: 100rpx;
 }  
  
 .btn-box .btn {  

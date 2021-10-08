@@ -3,21 +3,18 @@
 <image class="background" src="../../images/background.png"></image>
 <!-- 规则弹窗 -->
 <page-container class="tanchuang" show="{{rule_show}}" overlay-style="z-index:99" custom-style="z-index:999">
-    <image src="../../images/rulers.jpg"></image>
+    <image src="../../images/rulers.jpg" mode="heightFix" class="guize"></image>
 </page-container>
 <!-- 顶部图标 -->
 <view class="flex-wrp" style="flex-direction:row" >
-    <button class="b">
+    <button class="b" bindtap="goresult">
       <image class="top" src="../../images/颁奖.png"></image>结果
     </button>
-    <!-- <button class="b">           
-      <image class="top" src="../../images/团队.png"></image>成员
-    </button> -->
-    <button class="b">
+    <button class="b" bindtap="gosetting">
       <image class="top" src="../../images/管理设置.png"></image>设置
     </button>
     <button class="b">
-      <image class="top" src="../../images/推荐有奖.png"></image>奖品
+      <image class="top" src="../../images/推荐有奖.png" bindtap="gogift"></image>奖品
     </button>
     <button class="b">
       <image class="top" src="../../images/测评.png" bindtap="handlerule"></image>规则
@@ -26,22 +23,29 @@
 <!-- 轮播图 -->
 <swiper indicator-dots="true" autoplay="true" interval="2000" circular="true">
   <swiper-item>
-    <image mode="widthFix" src="../../images/rank.png"></image>
+    <image mode="widthFix" src="../../images/1.png"></image>
   </swiper-item>
   <swiper-item>
-    <image mode="widthFix" src="../../images/rank.png"></image>
+    <image mode="widthFix" src="../../images/2.png"></image>
   </swiper-item>
   <swiper-item>
-    <image mode="widthFix" src="../../images/rank.png"></image>
+    <image mode="widthFix" src="../../images/3.png"></image>
+  </swiper-item>
+  <swiper-item>
+    <image mode="widthFix" src="../../images/4.png"></image>
+  </swiper-item>
+  <swiper-item>
+    <image mode="widthFix" src="../../images/5.png"></image>
+  </swiper-item>
+  <swiper-item>
+    <image mode="widthFix" src="../../images/6.png"></image>
   </swiper-item>
 </swiper>
 <!-- 文字标签 -->
-<!-- <text class="textstyle1">房间号：</text>
-<text class="textstyle2">房间名：</text> -->
-<text selectable decode class="textstyle1">&nbsp;</text>
-<text selectable decode class="textstyle2">&nbsp;</text>
-<text class="textstyle2">房间人数：</text>
+<text class="textstyle1">{{str}}</text>
+<text class="textstyle2">房间人数: {{pnum}}</text>
+<text class="textstyle2">每人骰子次数：{{pcnt}}</text>
 <!-- 开始按钮 -->
-<navigator url="../game/game">
-  <button class="begin">开始博饼</button>
+<navigator url="../game/game" class="nav">
+  <button style="width:300rpx" class="begin">开始博饼</button>
 </navigator>

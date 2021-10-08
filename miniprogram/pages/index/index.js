@@ -12,7 +12,21 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        wx.setStorageSync("knum",8)
+        wx.setStorageSync("kcnt",5)
+        wx.setStorageSync("gname1","状元奖品名")
+        wx.setStorageSync("gnum1",1)
+        wx.setStorageSync("gname2","对堂奖品名")
+        wx.setStorageSync("gnum2",1)
+        wx.setStorageSync("gname3","三红奖品名")
+        wx.setStorageSync("gnum3",1)
+        wx.setStorageSync("gname4","四进奖品名")
+        wx.setStorageSync("gnum4",1)
+        wx.setStorageSync("gname5","二举奖品名")
+        wx.setStorageSync("gnum5",1)
+        wx.setStorageSync("gname6","一秀奖品名")
+        wx.setStorageSync("gnum6",1)
+        wx.setStorageSync("count",5*8)
     },
 
     /**

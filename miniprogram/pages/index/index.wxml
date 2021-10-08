@@ -1,37 +1,19 @@
 <!--pages/index/index.wxml-->
 <view  class="box">
-    <!-- 规则弹窗 
-    <page-container class="tanchuang" show="{{rule_show}}" overlay-style="z-index:99" custom-style="z-index:999">
-        <image src="../../images/rulers.jpg"></image>
-    </page-container>
-    -->
     <!-- 背景图片 -->
     <image class="background" src="../../images/index_background.jpg"></image>
-    <!-- 按钮
-    <view class="flex-wrp" style="flex-direction:row" >
-        <navigator class="b1" url="../rank/rank">
-            <image class="icon" src="../../images/list.png"></image> 排行
-        </navigator>
-        <button class="b">
-            <image class="icon" src="../../images/order.png" bindtap="handlerule"></image>规则
-        </button>
-        <button class="b">
-            <image class="icon" src="../../images/setting.png"></image>设置
-        </button>
-        <button class="b" open-type="share">
-            <image class="icon" src="../../images/share.png"></image>分享
-        </button>
-    </view>
-    -->
+    <!-- 创建房间按钮 -->
     <navigator url="../room/room">
-        <button id="img" class="button1">
+        <button id="img" style="width:350rpx" class="button1">
             <image id="img" mode="aspectFit" class="cake1" src="../../images/cake_icon.jpg"></image>创建房间
         </button>
     </navigator>
-    <button id="img" class="button2">
+    <!-- 加入房间按钮 -->
+    <button id="img" style="width:350rpx" class="button2">
         <image id="img" mode="aspectFit" class="cake2" src="../../images/cake_icon.jpg"></image>加入房间
     </button>
-    <button id="img" class="button2">
+    <!-- 快速入桌按钮 -->
+    <button id="img" style="width:350rpx" class="button2">
         <image id="img" mode="aspectFit" class="cake3" src="../../images/cake_icon.jpg"></image>快速入桌
     </button>
 </view>
