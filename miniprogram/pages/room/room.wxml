@@ -3,22 +3,22 @@
 <image class="background" src="../../images/background.png"></image>
 <!-- 规则弹窗 -->
 <page-container class="tanchuang" show="{{rule_show}}" overlay-style="z-index:99" custom-style="z-index:999">
-    <image src="../../images/rulers.jpg" mode="heightFix" class="guize"></image>
+  <image src="../../images/rulers.jpg" mode="heightFix" class="guize"></image>
 </page-container>
 <!-- 顶部图标 -->
-<view class="flex-wrp" style="flex-direction:row" >
-    <button class="b" bindtap="goresult">
-      <image class="top" src="../../images/颁奖.png"></image>结果
-    </button>
-    <button class="b" bindtap="gosetting">
-      <image class="top" src="../../images/管理设置.png"></image>设置
-    </button>
-    <button class="b">
-      <image class="top" src="../../images/推荐有奖.png" bindtap="gogift"></image>奖品
-    </button>
-    <button class="b">
-      <image class="top" src="../../images/测评.png" bindtap="handlerule"></image>规则
-    </button>
+<view class="flex-wrp" style="flex-direction:row">
+  <button class="b" bindtap="goresult">
+    <image class="top" src="../../images/颁奖.png"></image>结果
+  </button>
+  <button class="b" bindtap="gosetting">
+    <image class="top" src="../../images/管理设置.png"></image>设置
+  </button>
+  <button class="b">
+    <image class="top" src="../../images/推荐有奖.png" bindtap="gogift"></image>奖品
+  </button>
+  <button class="b">
+    <image class="top" src="../../images/测评.png" bindtap="handlerule"></image>规则
+  </button>
 </view>
 <!-- 轮播图 -->
 <swiper indicator-dots="true" autoplay="true" interval="2000" circular="true">

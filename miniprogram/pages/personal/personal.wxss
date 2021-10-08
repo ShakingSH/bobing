@@ -1,8 +1,10 @@
 /* pages/personal/personal.wxss */
 /* 背景色 */
+
 page{
   background-color: #EAF0FB;
 }
+
 /* 用户登录框图设置 */
 .user{
   width:50%;
@@ -16,9 +18,11 @@ page{
   display: flex;
   flex-direction: row;
 }
+
 .userinfo{
   height: 100%;
 }
+
 /* 用户头像设置 */
 .userinfo-avatar{
   height: 200rpx;
@@ -27,6 +31,7 @@ page{
   margin-left: 4rpx;
   border-radius: 50%;
 }
+
 /* 用户名称设置 */
 .userinfo-nickname
 {
@@ -38,6 +43,7 @@ page{
   align-items: center;
   margin-left: 70rpx;
 }
+
 /* 用户反馈按钮设置 */
 .button1{
   margin-top: 20% ;
@@ -51,6 +57,7 @@ page{
   padding-left: 0%;
   padding-right: 0%
 }
+
 /* 退出登录按钮设置 */
 .button2{
   margin-top: 13% ;

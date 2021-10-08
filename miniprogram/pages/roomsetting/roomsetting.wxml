@@ -4,7 +4,7 @@
     <image mode="aspectFit" src="../../images/back.png" class="back" bindtap="back"></image>
     <text class="set">设置</text>
 </view>
-<!-- 设置奖品 -->
+<!-- 设置人数 -->
 <form class="setting" bindsubmit="formsubmit">
     <view class="frame1">
         <view class="font">
@@ -12,14 +12,14 @@
         <input type="number" placeholder="请输入人数" name="playernum"></input>
         </view>
     </view>
-    
+<!-- 设置次数 -->
     <view class="frame1">
         <view class="font">
         <label>每人投掷次数：</label>
         <input type="number" placeholder="请输入每人的骰子次数" name="dicecnt"></input>
         </view>
     </view>
-
+<!-- 设置状元奖品与数量 -->
     <view class="frame2">
         <view class="font">
         <label>状元奖品与数量:</label>
@@ -27,7 +27,7 @@
         <input type="number" placeholder="请输入奖品数量" name="giftcnt1"></input>
         </view>
     </view>
-
+<!-- 设置榜眼奖品与数量与数量 -->
     <view class="frame2">
         <view class="font">
         <label>榜眼奖品与数量:</label>
@@ -35,7 +35,7 @@
         <input type="number" placeholder="请输入奖品数量" name="giftcnt2"></input>
         </view>
     </view>
-
+<!-- 设置探花奖品与数量 -->
      <view class="frame2">
         <view class="font">
         <label>探花奖品与数量:</label>
@@ -43,7 +43,7 @@
         <input type="number" placeholder="请输入奖品数量" name="giftcnt3"></input>
         </view>
     </view>
-
+<!-- 设置进士奖品与数量 -->
      <view class="frame2">
         <view class="font">
         <label>进士奖品与数量:</label>
@@ -51,7 +51,7 @@
         <input type="number" placeholder="请输入奖品数量" name="giftcnt4"></input>
         </view>
     </view>
-
+<!-- 设置举人奖品与数量 -->
     <view class="frame2">
         <view class="font">
         <label>举人奖品与数量:</label>
@@ -59,7 +59,7 @@
         <input type="number" placeholder="请输入奖品数量" name="giftcnt5"></input>
         </view>
     </view>
-
+<!-- 设置秀才奖品与数量 -->
     <view class="frame2">
         <view class="font">
         <label>秀才奖品与数量:</label>
@@ -67,6 +67,6 @@
         <input type="number" placeholder="请输入奖品数量" name="giftcnt6"></input>
         </view>
     </view>
-
+<!-- 设置确认按钮 -->
     <button style="width:200rpx" type="primary" size="default" form-type="submit">确定</button>
 </form>

@@ -1,5 +1,5 @@
 <!--pages/index/index.wxml-->
-<view  class="box">
+<view class="box">
     <!-- 背景图片 -->
     <image class="background" src="../../images/index_background.jpg"></image>
     <!-- 创建房间按钮 -->

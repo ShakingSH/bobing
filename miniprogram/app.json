@@ -15,8 +15,7 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/index/index",
         "text": "博饼",
         "iconPath": "images/bobing.png",

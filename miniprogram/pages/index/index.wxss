@@ -1,12 +1,15 @@
 /* pages/index/index.wxss */
+
 .box {
   height: 100%;
   width: 100%;
 }
-.flex-wrp{
+
+.flex-wrp {
   margin-top: 10rpx;
-  display:flex;
+  display: flex;
 }
+
 /* 背景图片 */
 .background {
   position: fixed;
@@ -15,9 +18,10 @@
   background-size: 100%;
   z-index: -1;
 }
+
 /* 创建房间按钮设置 */
 .button1 {
-  margin-top: 35% ;
+  margin-top: 35%;
   width: auto;
   height: 40px;
   background-color: rgba(255, 255, 255);
@@ -28,9 +32,10 @@
   padding-left: 9%;
   padding-right: 0%
 }
+
 /* 加入房间/快速入桌 按钮设置 */
 .button2 {
-  margin-top: 15% ;
+  margin-top: 15%;
   width: auto;
   height: 40px;
   background-color: rgba(255, 255, 255);
@@ -41,6 +46,7 @@
   padding-left: 9%;
   padding-right: 0%
 }
+
 /* cakex 图标设置 */
 .cake1 {
   position: fixed;
@@ -50,6 +56,7 @@
   width: 10%;
   height: 10%;
 }
+
 .cake2 {
   position: fixed;
   z-index: 0;
@@ -58,6 +65,7 @@
   width: 10%;
   height: 10%;
 }
+
 .cake3 {
   position: fixed;
   z-index: 0;
@@ -66,7 +74,8 @@
   width: 10%;
   height: 10%;
 }
+
 /* 按钮透明度 */
-#img{
+#img {
   opacity: 70%;
 }

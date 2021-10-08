@@ -6,5 +6,3 @@
 <view wx:for="{{playerlist}}" wx:for-item="item" class="font">
   {{item}}
 </view>
-
-
